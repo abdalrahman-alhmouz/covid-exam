@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./layout/head.ejs') %>
+  <body>
+    <%- include('./layout/header.ejs') %>
+
+    <div class="style">
+
+        <% array.forEach(val=>{ %>
+            <h3>Country : <%= val.Country %></h3> 
+            <h3>TotalConfirmed : <%= val.TotalConfirmed %></h3> 
+            <h3>TotalDeaths : <%= val.TotalDeaths %></h3> 
+            <h3>TotalRecovered : <%= val.TotalRecovered %></h3> 
+            <h3>Date : <%= val.Date %></h3> 
+            <form action="/addDatabase" method="POST">
+<input type="hidden" name="Country" value="<%= val.Country %>">
+<input type="hidden" name="TotalConfirmed" value="<%= val.TotalConfirmed %>">
+<input type="hidden" name="TotalDeaths" value="<%= val.TotalDeaths %>">
+<input type="hidden" name="TotalRecovered" value="<%= val.TotalRecovered %>">
+<input type="hidden" name="Date" value="<%= val.Date %>">
+
+            <button type="submit"> add-to-my-records</button>
+        </form>
+      <%  }) %>
+    
+  
+    </div>
+
+    <%- include('./layout/footer.ejs') %>
+  </body>
+</html>

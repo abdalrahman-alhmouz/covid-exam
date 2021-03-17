@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./layout/head.ejs') %>
+  <body>
+    <%- include('./layout/header.ejs') %>
+
+    <div class="stylee">
+
+        <% array.forEach(val=>{ %>
+        <form action="/viewdetal/<%= val.id %>" method="GET"> 
+
+            <h3>Cases : <%= val.country %></h3> 
+            <h3>Date : <%= val.date %></h3> 
+    <button type="submit">View-Details</button>
+
+
+</form>
+       
+      <%  }) %>
+    
+  
+    </div>
+
+    <%- include('./layout/footer.ejs') %>
+  </body>
+</html>

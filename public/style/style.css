@@ -1,0 +1,27 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+header{
+    height: 90px;
+    background-color: rgb(191, 191, 236);
+    color: rgb(14, 10, 10);
+}
+
+.style{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    flex-direction: column;
+    margin: 15px;
+    background-color: rgb(196, 153, 117);
+    border-radius: 5px;
+    box-shadow: 5px;
+
+}
+
+button{
+    padding: 20px;
+    border-radius: 5px;
+    background-color: rgb(140, 172, 194);
+}

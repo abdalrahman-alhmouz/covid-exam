@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./layout/head.ejs') %>
+  <body>
+    <%- include('./layout/header.ejs') %>
+
+    <div class="style">
+     <h3>TotalConfirmed : <%= array.TotalConfirmed %></h3> 
+     <h3>TotalDeaths : <%= array.TotalDeaths %></h3> 
+     <h3>TotalRecovered :<%= array.TotalRecovered %></h3> 
+
+     <form action="getdata" method="GET">
+
+      <label > search for country</label>
+       <input type="text" name="search">
+
+       <label >from</label>
+       <input type="date" name="from">
+
+       
+       <label >to</label>
+       <input type="date" name="to">
+<button type="submit"> search now</button>
+
+     </form>
+    </div>
+
+    <%- include('./layout/footer.ejs') %>
+  </body>
+</html>
